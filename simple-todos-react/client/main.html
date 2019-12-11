@@ -1,0 +1,31 @@
+<head>
+  <title>Todo List</title>
+</head>
+
+<body>
+
+    <button style="background-color:#1C1C1C; border-color:#1C1C1C; color:white" onclick = "NightMode()">Night Mode </button>
+    <button style="background-color:#315481; border-color:#315481; color:white"onclick = "DayMode()">Day Mode </button>  
+    <script> 
+        function changeColor(color) { 
+            document.body.style.background = color;
+        } 
+          
+        function NightMode() { 
+            changeColor('#1C1C1C');
+        }     
+        function DayMode() { 
+            changeColor('#315481'); 
+        }  
+    </script>  
+  <div align=right>
+      <font color="white"><p>Tänane kuupäev: <span id="datetime"></span></p></font>
+    <script>
+      var dt = new Date();
+      document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear());    </script>
+    </div>
+    
+    
+  
+  <div id="render-target"></div>
+</body>
